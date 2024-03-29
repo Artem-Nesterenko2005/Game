@@ -5,8 +5,6 @@ public class EventLoop
     public event EventHandler<EventArgs> UpHandler = (sender, args) => { };
     public event EventHandler<EventArgs> DownHandler = (sender, args) => { };
 
-    //TODO map = .....
-
     public void Run()
     {
         while (true)
