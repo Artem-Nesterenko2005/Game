@@ -1,12 +1,23 @@
+using System.Reflection.Metadata.Ecma335;
+
 public class EventLoop
 {
     public event EventHandler<EventArgs> LeftHandler = (sender, args) => { };
+
     public event EventHandler<EventArgs> RightHandler = (sender, args) => { };
+
     public event EventHandler<EventArgs> UpHandler = (sender, args) => { };
+
     public event EventHandler<EventArgs> DownHandler = (sender, args) => { };
+
+    public event EventHandler<EventArgs> DrawMap = (sender, args) => { };
+
+    public event EventHandler<EventArgs> UpdateMap = (sender, args) => { };
 
     public void Run()
     {
+        DrawMap(this, EventArgs.Empty);
+
         while (true)
         {
             var key = Console.ReadKey(true);
@@ -33,6 +44,8 @@ public class EventLoop
                     break;
                 }
             }
+            
+            UpdateMap(this, EventArgs.Empty);
         }
     }
 }
