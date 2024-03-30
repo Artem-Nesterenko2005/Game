@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 
 public class Game
 {
-    private List<List<char>> map = ["@oo".ToList(), "ooo".ToList(), "ooo".ToList()];
+    private List<List<char>> map = ["@xo".ToList(), "ooo".ToList(), "ooo".ToList()];
     private Player player = new Player();
 
     public void SetMap()
