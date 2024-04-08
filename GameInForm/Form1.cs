@@ -55,5 +55,37 @@ namespace GameInForm
             PaintEventArgs paintEventArgs = new PaintEventArgs(graphics, this.ClientRectangle);
             this.map.UpdateMap(sender, paintEventArgs);
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            Console.WriteLine('1');
+            switch (e.KeyCode)
+            {
+                case Keys.W:
+                    {
+                        this.map.OnUp(sender, e);
+                        break;
+                    }
+                case Keys.S:
+                    {
+                        this.map.OnDown(sender, e);
+                        break;
+                    }
+                case Keys.A:
+                    {
+                        this.map.OnLeft(sender, e);
+                        break;
+                    }
+                case Keys.D:
+                    {
+                        this.map.OnRight(sender, e);
+                        break;
+                    }
+            }
+
+            Graphics graphics = this.CreateGraphics();
+            PaintEventArgs paintEventArgs = new PaintEventArgs(graphics, this.ClientRectangle);
+            this.map.UpdateMap(sender, paintEventArgs);
+        }
     }
 }
