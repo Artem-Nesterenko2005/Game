@@ -4,14 +4,14 @@ using System.Drawing;
 
 namespace GameInForm
 {
-    partial class Form1
+    partial class Game
     {
         /// <summary>
         /// Обязательная переменная конструктора.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        private Game map = new Game();
+        private Properties.Game map = new Properties.Game();
 
         /// <summary>
         /// Освободить все используемые ресурсы.
@@ -52,7 +52,9 @@ namespace GameInForm
             // 
             // buttonDown
             // 
-            this.buttonDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDown.Font = new System.Drawing.Font("Akrobat ExtraBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDown.Location = new System.Drawing.Point(66, 132);
             this.buttonDown.Margin = new System.Windows.Forms.Padding(0);
@@ -67,13 +69,15 @@ namespace GameInForm
             // 
             // buttonUp
             // 
-            this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonUp.Font = new System.Drawing.Font("Akrobat ExtraBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonUp.Location = new System.Drawing.Point(66, 3);
+            this.buttonUp.Location = new System.Drawing.Point(66, 0);
             this.buttonUp.Margin = new System.Windows.Forms.Padding(0);
             this.buttonUp.Name = "buttonUp";
-            this.buttonUp.Size = new System.Drawing.Size(66, 63);
+            this.buttonUp.Size = new System.Drawing.Size(66, 66);
             this.buttonUp.TabIndex = 1;
             this.buttonUp.Text = "↑";
             this.buttonUp.UseVisualStyleBackColor = true;
@@ -81,7 +85,9 @@ namespace GameInForm
             // 
             // buttonLeft
             // 
-            this.buttonLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLeft.Font = new System.Drawing.Font("Akrobat ExtraBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonLeft.Location = new System.Drawing.Point(0, 66);
             this.buttonLeft.Margin = new System.Windows.Forms.Padding(0);
@@ -94,7 +100,9 @@ namespace GameInForm
             // 
             // buttonRight
             // 
-            this.buttonRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRight.Font = new System.Drawing.Font("Akrobat ExtraBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonRight.Location = new System.Drawing.Point(132, 66);
             this.buttonRight.Margin = new System.Windows.Forms.Padding(0);
@@ -108,6 +116,7 @@ namespace GameInForm
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
@@ -117,6 +126,8 @@ namespace GameInForm
             this.tableLayoutPanel1.Controls.Add(this.buttonUp, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonDown, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(588, 238);
+            this.tableLayoutPanel1.MaximumSize = new System.Drawing.Size(200, 200);
+            this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(100, 100);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -125,15 +136,16 @@ namespace GameInForm
             this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 200);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // Form1
+            // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.KeyPreview = true;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.MinimumSize = new System.Drawing.Size(600, 400);
+            this.Name = "Game";
+            this.Text = "Top1Game";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.tableLayoutPanel1.ResumeLayout(false);

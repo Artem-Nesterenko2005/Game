@@ -65,7 +65,7 @@ namespace GameInForm.Properties
         public void DrawMap(object sender, System.Windows.Forms.PaintEventArgs e)
         {
             Brush blackBruah = new SolidBrush(Color.Black);
-            Brush greenBrush = new SolidBrush(Color.Green);
+            Brush greenBrush = new SolidBrush(Color.LightSeaGreen);
             for (int row = 0; row < map.Count; ++row)
             {
                 for (int col = 0; col < map[row].Count; ++col)
@@ -81,6 +81,7 @@ namespace GameInForm.Properties
                             {
                                 e.Graphics.FillEllipse(blackBruah, FieldSize * col, FieldSize * row, FieldSize, FieldSize);
                                 break;
+                                
                             }
                     }
                 }
@@ -92,10 +93,9 @@ namespace GameInForm.Properties
         public void UpdateMap(object sender, System.Windows.Forms.PaintEventArgs e)
         {
             Brush redBrush = new SolidBrush(Color.Red);
-            Brush greenBrush = new SolidBrush(Color.Green);
+            Brush greenBrush = new SolidBrush(Color.LightSeaGreen);
             Brush blueBrush = new SolidBrush(Color.Blue);
 
-            MoveEnemies();
             foreach (var enemy in enemies)
             {
                 e.Graphics.FillEllipse(greenBrush, FieldSize * enemy.OldX, FieldSize * enemy.OldY, FieldSize, FieldSize);
@@ -175,6 +175,7 @@ namespace GameInForm.Properties
             {
                 player.MoveLeft();
             }
+            MoveEnemies();
         }
 
         public void OnRight(object sender, EventArgs args)
@@ -183,6 +184,7 @@ namespace GameInForm.Properties
             {
                 player.MoveRight();
             }
+            MoveEnemies();
         }
 
         public void OnUp(object sender, EventArgs args)
@@ -191,6 +193,7 @@ namespace GameInForm.Properties
             {
                 player.MoveUp();
             }
+            MoveEnemies();
         }
 
         public void OnDown(object sender, EventArgs args)
@@ -199,6 +202,7 @@ namespace GameInForm.Properties
             {
                 player.MoveDown();
             }
+            MoveEnemies();
         }
     }
 
