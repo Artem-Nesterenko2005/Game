@@ -5,7 +5,7 @@ namespace GameInFormTest
         [Test]
         public void Test1()
         {
-            GameInForm 
+            
         }
     }
 }

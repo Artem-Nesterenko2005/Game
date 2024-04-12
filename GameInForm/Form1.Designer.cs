@@ -28,7 +28,7 @@ namespace GameInForm
 
         private void SetMap()
         {
-            this.map.SetMap("../../map.txt");
+            this.map.SetMap("../../map.txt", this);
             this.map.FieldSize = this.Height / map.Size;
             this.Paint += this.map.DrawMap;
             this.Resize += this.map.Resize;
