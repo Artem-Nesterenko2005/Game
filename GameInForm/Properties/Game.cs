@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GameInForm.Properties
 {
-    internal class Map
+    internal class Game
     {
         private List<List<char>> map = new List<List<char>>();
         private Player player = new Player();
